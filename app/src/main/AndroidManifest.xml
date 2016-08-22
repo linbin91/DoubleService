@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.linbin.doubleservice">
 
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -19,6 +20,8 @@
         <service android:name=".service.LocalService"/>
         <service android:name=".service.RemoteService"
             android:process=".remoteService"></service>
+        <service android:name=".JobHandleService"
+            android:permission="android.permission.BIND_JOB_SERVICE"></service>
     </application>
 
 </manifest>
